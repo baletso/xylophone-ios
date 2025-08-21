@@ -1,48 +1,54 @@
-//
-//  ViewController.swift
-//  Xylophone
-//
-//  Created by Bárbara Letelier on 18-08-25.
-//
 import UIKit
 import AVFoundation
 
 final class ViewController: UIViewController {
+
+    @IBOutlet var keyButtons: [UIButton]!
+
     private var player: AVAudioPlayer?
-    private let noteForTag: [Int: String] = [
-        1: "Do",
-        2: "Re",
-        3: "Mi",
-        4: "Fa",
-        5: "Sol",
-        6: "La",
-        7: "Si",
-        8: "2Do"
-    ]
+    private let pinTag = 4242
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        debugListWavs()
+
+        do {
+            let session = AVAudioSession.sharedInstance()
+            try session.setCategory(.playback, mode: .default, options: [.mixWithOthers])
+            try session.setActive(true)
+        } catch {
+            print("❌ AVAudioSession error:", error)
+        }
     }
 
-    @IBAction private func keyPressed(_ sender: UIButton) {
-        guard let name = noteForTag[sender.tag] else {
-            print("⚠️ Tag fuera de rango: \(sender.tag)")
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        keyButtons.forEach { btn in
+            if btn.subviews.first(where: { $0.tag == pinTag }) == nil {
+                addPins(to: btn)
+            }
+        }
+    }
+
+    @IBAction func keyPressed(_ sender: UIButton) {
+        animateTap(on: sender)
+
+        let soundName = sender.accessibilityIdentifier?
+            .trimmingCharacters(in: .whitespacesAndNewlines)
+
+        let fallback = sender.titleLabel?.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+
+        guard let name = (soundName?.isEmpty == false ? soundName : fallback),
+              !name.isEmpty else {
+            print("❌ No hay nombre de sonido para el botón.")
             return
         }
+
         playSound(named: name)
-        animatePress(sender)
     }
 
-    // MARK: - Audio
     private func playSound(named soundName: String) {
-        // Si importaste como "Create groups" (carpeta amarilla):
-        let url1 = Bundle.main.url(forResource: soundName, withExtension: "wav")
-
-        // Si por error quedó como folder reference (carpeta azul) llamada "Sounds":
-        let url2 = Bundle.main.url(forResource: soundName, withExtension: "wav", subdirectory: "Sounds")
-
-        guard let url = url1 ?? url2 else {
+        guard let url = Bundle.main.url(forResource: soundName, withExtension: "wav") else {
             print("❌ No se encontró \(soundName).wav en el bundle")
             return
         }
@@ -51,27 +57,57 @@ final class ViewController: UIViewController {
             player = try AVAudioPlayer(contentsOf: url)
             player?.prepareToPlay()
             player?.play()
-            print("▶️ Reproduciendo \(soundName)")
+            print("✅ Reproduciendo \(soundName).wav")
         } catch {
-            print("❌ Error al reproducir \(soundName): \(error)")
+            print("❌ Error AVAudioPlayer:", error)
         }
     }
 
-    // MARK: - Visual Feedback
-    private func animatePress(_ button: UIButton) {
-        UIView.animate(withDuration: 0.08, animations: {
-            button.alpha = 0.6
+    private func animateTap(on button: UIButton) {
+        UIView.animate(withDuration: 0.07, animations: {
+            button.transform = CGAffineTransform(scaleX: 0.97, y: 0.97)
         }) { _ in
-            UIView.animate(withDuration: 0.08) {
-                button.alpha = 1.0
+            UIView.animate(withDuration: 0.12) {
+                button.transform = .identity
             }
         }
     }
 
-    // MARK: - Debug
-    private func debugListWavs() {
-        let urls = (Bundle.main.urls(forResourcesWithExtension: "wav", subdirectory: nil) ?? [])
-                 + (Bundle.main.urls(forResourcesWithExtension: "wav", subdirectory: "Sounds") ?? [])
-        print("📦 WAVs en el bundle:", urls.map { $0.lastPathComponent })
+    private func addPins(to button: UIButton) {
+
+        let pinSize: CGFloat = 18
+        let inset: CGFloat = 16
+
+        func makePin() -> UIView {
+            let v = UIView()
+            v.tag = pinTag
+            v.isUserInteractionEnabled = false
+            v.backgroundColor = .white
+            v.translatesAutoresizingMaskIntoConstraints = false
+            v.layer.cornerRadius = pinSize / 2
+            v.clipsToBounds = true
+            return v
+        }
+
+        let leftPin = makePin()
+        let rightPin = makePin()
+
+        button.addSubview(leftPin)
+        button.addSubview(rightPin)
+
+        NSLayoutConstraint.activate([
+            // Izquierdo
+            leftPin.centerYAnchor.constraint(equalTo: button.centerYAnchor),
+            leftPin.leadingAnchor.constraint(equalTo: button.leadingAnchor, constant: inset),
+            leftPin.widthAnchor.constraint(equalToConstant: pinSize),
+            leftPin.heightAnchor.constraint(equalToConstant: pinSize),
+
+            // Derecho
+            rightPin.centerYAnchor.constraint(equalTo: button.centerYAnchor),
+            rightPin.trailingAnchor.constraint(equalTo: button.trailingAnchor, constant: -inset),
+            rightPin.widthAnchor.constraint(equalToConstant: pinSize),
+            rightPin.heightAnchor.constraint(equalToConstant: pinSize),
+        ])
+        button.layoutIfNeeded()
     }
 }

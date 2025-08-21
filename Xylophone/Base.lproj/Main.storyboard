@@ -22,6 +22,7 @@
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWR-IB-HdX" userLabel="Do">
                                         <rect key="frame" x="0.0" y="0.0" width="353" height="64.333333333333329"/>
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="Do"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Do">
@@ -40,6 +41,7 @@
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TSZ-vn-gZJ" userLabel="Re">
                                         <rect key="frame" x="0.0" y="80.333333333333343" width="353" height="64.333333333333343"/>
                                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="Re"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Re">
@@ -58,6 +60,7 @@
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2xE-17-2Vz" userLabel="Mi">
                                         <rect key="frame" x="0.0" y="160.66666666666669" width="353" height="64"/>
                                         <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="Mi"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Mi">
@@ -76,6 +79,7 @@
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="svZ-A2-GfE" userLabel="Fa">
                                         <rect key="frame" x="0.0" y="240.66666666666671" width="353" height="64.333333333333343"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="Fa"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Fa">
@@ -94,6 +98,7 @@
                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="944-df-CTQ" userLabel="Sol">
                                         <rect key="frame" x="0.0" y="321" width="353" height="64.333333333333314"/>
                                         <color key="backgroundColor" systemColor="systemMintColor"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="Sol"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Sol">
@@ -112,6 +117,7 @@
                                     <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tlb-dN-0c0" userLabel="La">
                                         <rect key="frame" x="0.0" y="401.33333333333337" width="353" height="64.333333333333314"/>
                                         <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="La"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="La">
@@ -130,6 +136,7 @@
                                     <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PjP-bi-dOj" userLabel="Si">
                                         <rect key="frame" x="0.0" y="481.66666666666663" width="353" height="64"/>
                                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="Si"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Si">
@@ -175,6 +182,16 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ddJ-uH-TP8" secondAttribute="trailing" constant="20" id="xgS-g8-ZZX"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outletCollection property="keyButtons" destination="mWR-IB-HdX" collectionClass="NSMutableArray" id="IfY-GH-Gih"/>
+                        <outletCollection property="keyButtons" destination="TSZ-vn-gZJ" collectionClass="NSMutableArray" id="ZxZ-3O-WKe"/>
+                        <outletCollection property="keyButtons" destination="2xE-17-2Vz" collectionClass="NSMutableArray" id="J7r-o6-ub9"/>
+                        <outletCollection property="keyButtons" destination="svZ-A2-GfE" collectionClass="NSMutableArray" id="Cou-FS-Uoc"/>
+                        <outletCollection property="keyButtons" destination="944-df-CTQ" collectionClass="NSMutableArray" id="jpc-vg-ptm"/>
+                        <outletCollection property="keyButtons" destination="Tlb-dN-0c0" collectionClass="NSMutableArray" id="QL3-gV-Ohc"/>
+                        <outletCollection property="keyButtons" destination="PjP-bi-dOj" collectionClass="NSMutableArray" id="Hmh-D7-v0t"/>
+                        <outletCollection property="keyButtons" destination="8r3-Ez-gy7" collectionClass="NSMutableArray" id="D2p-xT-7Vx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
