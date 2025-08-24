@@ -10,6 +10,7 @@ final class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    
 
         do {
             let session = AVAudioSession.sharedInstance()
@@ -20,16 +21,11 @@ final class ViewController: UIViewController {
         }
     }
 
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-
-        keyButtons.forEach { btn in
-            if btn.subviews.first(where: { $0.tag == pinTag }) == nil {
-                addPins(to: btn)
-            }
-        }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
     }
-
+ 
     @IBAction func keyPressed(_ sender: UIButton) {
         animateTap(on: sender)
 

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HGt-Tn-NgX">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,10 +18,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ddJ-uH-TP8" userLabel="ButtonsVerticalStack">
-                                <rect key="frame" x="20" y="138" width="353" height="626"/>
+                                <rect key="frame" x="20" y="182" width="353" height="582"/>
                                 <subviews>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWR-IB-HdX" userLabel="Do">
-                                        <rect key="frame" x="0.0" y="0.0" width="353" height="64.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="58.666666666666664"/>
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                         <accessibility key="accessibilityConfiguration" identifier="Do"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -39,7 +40,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TSZ-vn-gZJ" userLabel="Re">
-                                        <rect key="frame" x="0.0" y="80.333333333333343" width="353" height="64.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="74.666666666666686" width="353" height="59"/>
                                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                         <accessibility key="accessibilityConfiguration" identifier="Re"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -58,7 +59,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2xE-17-2Vz" userLabel="Mi">
-                                        <rect key="frame" x="0.0" y="160.66666666666669" width="353" height="64"/>
+                                        <rect key="frame" x="0.0" y="149.66666666666669" width="353" height="58.666666666666657"/>
                                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                                         <accessibility key="accessibilityConfiguration" identifier="Mi"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -77,7 +78,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="svZ-A2-GfE" userLabel="Fa">
-                                        <rect key="frame" x="0.0" y="240.66666666666671" width="353" height="64.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="224.33333333333331" width="353" height="58.666666666666686"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <accessibility key="accessibilityConfiguration" identifier="Fa"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -96,7 +97,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="944-df-CTQ" userLabel="Sol">
-                                        <rect key="frame" x="0.0" y="321" width="353" height="64.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="299" width="353" height="58.666666666666686"/>
                                         <color key="backgroundColor" systemColor="systemMintColor"/>
                                         <accessibility key="accessibilityConfiguration" identifier="Sol"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -115,7 +116,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tlb-dN-0c0" userLabel="La">
-                                        <rect key="frame" x="0.0" y="401.33333333333337" width="353" height="64.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="373.66666666666663" width="353" height="59"/>
                                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                                         <accessibility key="accessibilityConfiguration" identifier="La"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -134,7 +135,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PjP-bi-dOj" userLabel="Si">
-                                        <rect key="frame" x="0.0" y="481.66666666666663" width="353" height="64"/>
+                                        <rect key="frame" x="0.0" y="448.66666666666663" width="353" height="58.666666666666686"/>
                                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                         <accessibility key="accessibilityConfiguration" identifier="Si"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -153,7 +154,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8r3-Ez-gy7" userLabel="2Do">
-                                        <rect key="frame" x="0.0" y="561.66666666666663" width="353" height="64.333333333333371"/>
+                                        <rect key="frame" x="0.0" y="523.33333333333337" width="353" height="58.666666666666629"/>
                                         <color key="backgroundColor" systemColor="systemPinkColor"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Button"/>
@@ -182,6 +183,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ddJ-uH-TP8" secondAttribute="trailing" constant="20" id="xgS-g8-ZZX"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="22c-em-fe4"/>
                     <connections>
                         <outletCollection property="keyButtons" destination="mWR-IB-HdX" collectionClass="NSMutableArray" id="IfY-GH-Gih"/>
                         <outletCollection property="keyButtons" destination="TSZ-vn-gZJ" collectionClass="NSMutableArray" id="ZxZ-3O-WKe"/>
@@ -195,30 +197,84 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="44" y="-2"/>
+            <point key="canvasLocation" x="970.2290076335878" y="-2.1126760563380285"/>
+        </scene>
+        <!--Launch View Controller-->
+        <scene sceneID="o7K-fN-Oq8">
+            <objects>
+                <viewController id="gAs-AR-Xhe" customClass="LaunchViewController" customModule="Xylophone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1jW-ke-Nd8">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppLogo" translatesAutoresizingMaskIntoConstraints="NO" id="XHI-ha-2By">
+                                <rect key="frame" x="96.666666666666686" y="326" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="XHI-ha-2By" secondAttribute="height" multiplier="1:1" id="cLv-Dw-R8L"/>
+                                    <constraint firstAttribute="width" constant="200" id="j15-GW-kjB"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ldj-Ht-YZi"/>
+                        <color key="backgroundColor" name="BrandBackground"/>
+                        <constraints>
+                            <constraint firstItem="XHI-ha-2By" firstAttribute="centerX" secondItem="1jW-ke-Nd8" secondAttribute="centerX" id="1NV-2P-z7a"/>
+                            <constraint firstItem="XHI-ha-2By" firstAttribute="centerY" secondItem="1jW-ke-Nd8" secondAttribute="centerY" id="Udn-q7-tQP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="9Hr-Jg-KPJ"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="goXylophone" id="frp-Lg-wTt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZMK-Qx-aBW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="57" y="-2"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="F8W-ZA-f9n">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HGt-Tn-NgX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6Pd-sy-aEC">
+                        <rect key="frame" x="0.0" y="118" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gAs-AR-Xhe" kind="relationship" relationship="rootViewController" id="dBZ-wg-eK1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MoH-fk-fJo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-848.09160305343505" y="-2.1126760563380285"/>
         </scene>
     </scenes>
     <resources>
+        <image name="AppLogo" width="635" height="788"/>
+        <namedColor name="BrandBackground">
+            <color red="0.0" green="0.53700000047683716" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemMintColor">
-            <color red="0.0" green="0.78039215689999997" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPinkColor">
-            <color red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
-            <color red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
