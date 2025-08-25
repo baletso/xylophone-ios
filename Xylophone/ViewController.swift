@@ -25,6 +25,17 @@ final class ViewController: UIViewController {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        // Añade los pines una sola vez por botón
+        keyButtons.forEach { btn in
+            if btn.viewWithTag(pinTag) == nil {
+                addPins(to: btn)
+            }
+        }
+    }
  
     @IBAction func keyPressed(_ sender: UIButton) {
         animateTap(on: sender)
@@ -105,5 +116,8 @@ final class ViewController: UIViewController {
             rightPin.heightAnchor.constraint(equalToConstant: pinSize),
         ])
         button.layoutIfNeeded()
+        
+        button.bringSubviewToFront(leftPin)
+        button.bringSubviewToFront(rightPin)
     }
 }
